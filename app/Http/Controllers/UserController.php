@@ -16,12 +16,12 @@ class UserController extends Controller implements BaseInterface
 {
     function index()
     {
-//        if (Gate::allows('user-crud')) {
+        if (Gate::allows('user-crud')) {
             $users = User::all();
             return view('backend.admin.users.list', compact('users'));
-//        } else {
-//            abort(403);
-//        }
+        } else {
+            abort(403);
+        }
     }
 
     function create()
@@ -54,13 +54,13 @@ class UserController extends Controller implements BaseInterface
 
     function edit($id)
     {
-//        if (Gate::allows('user-crud')) {
+        if (Gate::allows('user-crud')) {
             $user = User::findOrFail($id);
             $roles = Role::all();
             return view('backend.admin.users.update', compact('user', 'roles'));
-//        } else {
-//            abort(403);
-//        }
+        } else {
+            abort(403);
+        }
     }
 
     function update(UpdateUserRequest $request, $id)

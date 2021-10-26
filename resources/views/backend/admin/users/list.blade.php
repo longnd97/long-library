@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
                 @foreach($users as $key=>$user)
-{{--                    @if($user->name!='Admin')--}}
+                    @if($user->name!='Admin')
                     <tr class="user-item" id="user-{{$user->id}}">
                         <td>{{$key++}}</td>
                         <td>{{$user->name}}</td>
@@ -59,7 +59,7 @@
                             </a>
                         </td>
                     </tr>
-{{--                    @endif--}}
+                    @endif
                 @endforeach
                 </tbody>
             </table>
