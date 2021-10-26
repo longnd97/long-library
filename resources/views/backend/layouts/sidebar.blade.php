@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Quản lý danh mục</div>
-                    @can('user-crud')
+{{--                    @can('user-crud')--}}
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                            data-bs-target="#collapseUsers"
                            aria-expanded="false" aria-controls="collapseUsers">
@@ -18,7 +18,7 @@
                                 <a class="nav-link" href="{{route('users.index')}}">Danh sách người dùng</a>
                             </nav>
                         </div>
-                    @endcan
+{{--                    @endcan--}}
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBooks"
                        aria-expanded="false" aria-controls="collapseBooks">
                         <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>

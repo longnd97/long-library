@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
                 @foreach($users as $key=>$user)
-                    @if($user->name!='Admin')
+{{--                    @if($user->name!='Admin')--}}
                     <tr class="user-item" id="user-{{$user->id}}">
                         <td>{{$key++}}</td>
                         <td>{{$user->name}}</td>
@@ -43,7 +43,7 @@
                         <td>
                             @if(count($user->roles) > 0)
                                 @foreach($user->roles as $role)
-                                    {{ $role->name . ',' }}
+                                    {{ $role->name }}
                                 @endforeach
                             @else
                                 {{'Chưa phân loại'}}
@@ -59,7 +59,7 @@
                             </a>
                         </td>
                     </tr>
-                    @endif
+{{--                    @endif--}}
                 @endforeach
                 </tbody>
             </table>

@@ -33,6 +33,6 @@ return [
     'google' => [
         'client_id' => '919552485378-rks1lnca3r78bfuk68cbojrp4n7sm1mv.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/google/callback',
+        'redirect' => 'https://long-library.herokuapp.com/google/callback',
     ],
 ];
