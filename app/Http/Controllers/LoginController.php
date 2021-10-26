@@ -26,6 +26,7 @@ class LoginController extends Controller
 
     function login(LoginRequest $request)
     {
+        dd($request);
         if ($this->loginService->checkLogin($request)) {
             return redirect()->route('home.index');
         }
