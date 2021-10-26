@@ -41,6 +41,7 @@ class BookController extends Controller implements BaseInterface
             $path = $image->store('images', 'public');
             $book->image = $path;
         }
+        dd($book);
         $book->save();
         Session::flash('success', 'Tạo mới sách thành công');
         return redirect()->route('books.index');
