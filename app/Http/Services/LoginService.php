@@ -10,10 +10,10 @@ class LoginService
     {
         $email = $request->email;
         $password = $request->password;
-        $credemtials = [
+        $credentials = [
             'email' => $email,
             'password' => $password
         ];
-        return Auth::attempt($credemtials);
+        return Auth::attempt($credentials);
     }
 }
