@@ -29,7 +29,7 @@ class RegisterController extends Controller
             $user->save();
             $user->roles()->sync(3);
             DB::commit();
-        } catch (Exception $exception) {
+            } catch (Exception $exception) {
             DB::rollBack();
         }
         return redirect()->route('login');
