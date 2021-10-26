@@ -82,7 +82,7 @@
             </div>
             <div class="sb-sidenav-footer">
                 <div class="small">Đăng nhập với tư cách: </div>
-                {{auth()->user()->name}}
+                @if(isset(auth()->user()->name)){{auth()->user()->name}}@endif
             </div>
         </nav>
     </div>
