@@ -38,7 +38,7 @@
                     @if($borrow->status==\App\Http\Controllers\BorrowConstant::BORROWED)
                         <tr>
                             <td>@if($key<9) <a href="" data-bs-toggle="modal" data-bs-target="#borrow-detail-{{$borrow->id}}">{{'PM00'.++$key}}</a>
-                                @else {{'PM0'.++$key}}
+                                @else <a href="" data-bs-toggle="modal" data-bs-target="#borrow-detail-{{$borrow->id}}">{{'PM0'.++$key}}</a>
                                 @endif
                             </td>
                             <div class="modal fade" id="borrow-detail-{{$borrow->id}}" data-bs-dismiss="modal" role="dialog"
@@ -49,8 +49,13 @@
                                             <h5 class="modal-title" id="borrow-detail">Chi tiết phiếu mượn</h5>
                                         </div>
                                         <div class="modal-body">
-                                            <b>Sách đang mượn:</b>
-                                            <br>
+                                            <b>Sách đang mượn:</b><br>
+                                            @if(count($borrow->books) > 0)
+                                                @foreach($borrow->books as $book)
+                                                    {{ $book->name }}
+                                                    <br>
+                                                @endforeach
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
